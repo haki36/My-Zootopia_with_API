@@ -20,8 +20,9 @@ Goal:
 - Avoid KeyError and IndexError by checking keys and list length before access.
 """
 
-import data_fetcher
 import json
+import data_fetcher
+
 
 BASE = "\t\t\t"
 I0 = BASE + "\t"
@@ -192,17 +193,14 @@ def user_choice():
     """
 
     while True:
-        choice = input("Enter skin type you are looking for "
-                       "or 'exit' for quit: ").strip().lower()
-
+        choice = input("Your choice: ").strip().lower()
         if choice == "":
-            return choice
+            return ""
         if choice.isdigit():
-            print("Input cannot be a digit")
+            print("Please enter text (not a number).")
             continue
         if choice in ("quit", "exit"):
             return "exit"
-
         return choice
 
 
@@ -234,16 +232,29 @@ def main():
         return
 
     skins = get_all_skin_of_animal(result_animals_data)
+
+    if not skins:
+        summary = get_animal_summary(result_animals_data)
+        update_html_file("animals_template.html",
+                         "animals.html",
+                         "__REPLACE_ANIMALS_INFO__",
+                         summary)
+        print("Website was successfully generated to the file animals.html.")
+        return
+
     allowed_skins = {s.lower() for s in skins}
 
     while True:
-        print('Empty for all animals or choose / write available skins')
-        print('Available skins are: ')
+        print(f'\nAnimals found for "{animal_name}"\n')
+        print("Available skin types:")
         for skin in skins:
-            print(skin)
-        print()
+            print(f"- {skin}")
 
-        user_input = user_choice().strip().lower()
+        print("\nPress Enter to show all animals.")
+        print('Or type a skin type to filter the results.')
+        print('Type "exit" to quit.\n')
+
+        user_input = user_choice()
         if user_input == "exit":
             print("Bye!")
             break
@@ -257,7 +268,7 @@ def main():
             print("Website was successfully generated to the file animals.html.")
             break
         if user_input not in allowed_skins:
-            print("Please choose one of the available skins")
+            print("Please type one of the listed skin types (or press Enter for all).")
             continue
 
         filtered = filter_by_skin_type(result_animals_data, user_input)
@@ -274,4 +285,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
