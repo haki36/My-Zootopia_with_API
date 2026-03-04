@@ -1,23 +1,10 @@
 """
-Zoo JSON Project
+Zootopia Animal Web Generator
 
-This script loads animal data from a JSON file (`animals_data.json`), generates a short
-summary for each animal, and injects the generated text into an HTML template by replacing
-a placeholder string. The final result is written to a new HTML file.
-
-Data expectations:
-- The JSON file contains a list of dictionaries (one dictionary per animal).
-- Some fields may be optional or missing.
-
-Output rules for the generated summary:
-- Only fields that exist are included.
-- Missing fields (e.g., diet, type, locations) are skipped without raising errors.
-- If locations are available, only the first location is used.
-- Animal blocks are separated by a blank line for readability.
-
-Goal:
-- Practice safe access to nested JSON structures (dicts and lists).
-- Avoid KeyError and IndexError by checking keys and list length before access.
+This script fetches animal data from an external API (via data_fetcher.py),
+generates an HTML summary for each animal, and injects the result into an
+HTML template by replacing a placeholder. The final result is written to
+animals.html.
 """
 
 import json
