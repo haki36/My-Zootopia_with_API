@@ -240,6 +240,18 @@ def main():
     animal_name = input('Enter a name of an animal: ').strip()
 
     result_animals_data = fetch_animals_from_api(animal_name)
+
+    if not result_animals_data:
+        error_html = f'<h2>The animal "{animal_name}" doesn\'t exist.</h2>'
+        update_html_file(
+            "animals_template.html",
+            "animals.html",
+            "__REPLACE_ANIMALS_INFO__",
+            error_html
+        )
+        print("Website was successfully generated to the file animals.html.")
+        return
+
     skins = get_all_skin_of_animal(result_animals_data)
     allowed_skins = {s.lower() for s in skins}
 
