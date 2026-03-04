@@ -1,0 +1,320 @@
+<html lang="en">
+    <head>
+        <style>
+        @gray-darker:               #444444;
+        @gray-dark:                 #696969;
+        @gray:                      #999999;
+        @gray-light:                #cccccc;
+        @gray-lighter:              #ececec;
+        @gray-lightest:             lighten(@gray-lighter,4%);
+
+
+        html {
+          background-color: #ffe9e9;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40pt;
+            font-weight: normal;
+        }
+
+        body {
+          font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          letter-spacing: 0;
+          padding: 1rem;
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          -moz-font-feature-settings: "liga" on;
+          width: 900px;
+          margin: auto;
+        }
+
+        .cards {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .cards__item {
+          background-color: white;
+          border-radius: 0.25rem;
+          box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+          overflow: hidden;
+          padding: 1rem;
+          margin: 50px;
+        }
+
+        .card__title {
+          color: @gray-dark;
+          font-size: 1.25rem;
+          font-weight: 300;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+
+        .card__text {
+          flex: 1 1 auto;
+          font-size: 0.95rem;
+          line-height: 2;
+          margin-bottom: 1.25rem;
+        }
+        </style>
+        <title>
+            Zoomania
+        </title>
+    </head>
+    <body>
+        <h1>My Animal Repository</h1>
+        <ul class="cards">
+			<li class="cards__item">
+				<div class="card__title">Name: American Foxhound</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Type: </strong>Hound</li>
+						<li><strong>Lifespan: </strong>10 to 12 years</li>
+						<li><strong>Skin type: </strong>Hair</li>
+						<li><strong>Location: </strong>North-America</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Arctic Fox</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Carnivore</li>
+						<li><strong>Type: </strong>Mammal</li>
+						<li><strong>Lifespan: </strong>7 - 10 years</li>
+						<li><strong>Weight: </strong>1.4kg - 9.4kg (3lbs - 21lbs)</li>
+						<li><strong>Length: </strong>70cm - 110cm (28in - 43in)</li>
+						<li><strong>Skin type: </strong>Fur</li>
+						<li><strong>Location: </strong>Eurasia</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Cross Fox</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Carnivore</li>
+						<li><strong>Type: </strong>mammal</li>
+						<li><strong>Lifespan: </strong>10 to 15 years in captivity, seven years in the wild</li>
+						<li><strong>Length: </strong>18 to 35 inches with 12 to 22 inch long tails, males a bit larger</li>
+						<li><strong>Skin type: </strong>Fur</li>
+						<li><strong>Location: </strong>North-America</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Darwin’s fox</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Type: </strong>Mammal</li>
+						<li><strong>Lifespan: </strong>Seven years</li>
+						<li><strong>Weight: </strong>4 to 8.7 pounds</li>
+						<li><strong>Length: </strong>20.79 inches</li>
+						<li><strong>Skin type: </strong>Fur</li>
+						<li><strong>Location: </strong>South-America</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: English Foxhound</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Lifespan: </strong>10 to 13 years</li>
+						<li><strong>Weight: </strong>75 pounds</li>
+						<li><strong>Skin type: </strong>Hair</li>
+						<li><strong>Location: </strong>Europe</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Fennec Fox</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Lifespan: </strong>10 - 14 years</li>
+						<li><strong>Weight: </strong>1kg - 1.5kg (2.2lbs - 3.3lbs)</li>
+						<li><strong>Length: </strong>24cm -41cm (9in - 16in)</li>
+						<li><strong>Skin type: </strong>Fur</li>
+						<li><strong>Location: </strong>Africa</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Fox</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Carnivore</li>
+						<li><strong>Type: </strong>Mammal</li>
+						<li><strong>Lifespan: </strong>3 - 11 years</li>
+						<li><strong>Weight: </strong>5kg - 11kg (11lbs - 24lbs)</li>
+						<li><strong>Length: </strong>40cm - 83cm (16in - 33in)</li>
+						<li><strong>Skin type: </strong>Fur</li>
+						<li><strong>Location: </strong>Africa</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Fox Snakes</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Carnivore</li>
+						<li><strong>Lifespan: </strong>approximately 20 years</li>
+						<li><strong>Skin type: </strong>Scales</li>
+						<li><strong>Location: </strong>North-America</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Fox Squirrel</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Type: </strong>rodent</li>
+						<li><strong>Lifespan: </strong>6-12.6 years</li>
+						<li><strong>Length: </strong>21 inches</li>
+						<li><strong>Skin type: </strong>Fur</li>
+						<li><strong>Location: </strong>Central-America</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Fox Terrier</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Lifespan: </strong>14 years</li>
+						<li><strong>Weight: </strong>8kg (18lbs)</li>
+						<li><strong>Skin type: </strong>Hair</li>
+						<li><strong>Location: </strong>Europe</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Golden-Crowned Flying Fox</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Herbivore</li>
+						<li><strong>Lifespan: </strong>unknown</li>
+						<li><strong>Weight: </strong>3.1 pounds</li>
+						<li><strong>Skin type: </strong>Hair</li>
+						<li><strong>Location: </strong>Asia</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Gray Fox</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Type: </strong>Mammal</li>
+						<li><strong>Lifespan: </strong>6-12 years</li>
+						<li><strong>Weight: </strong>3.2-6.4kg (7-14lbs)</li>
+						<li><strong>Length: </strong>89-105cm (35-41in)</li>
+						<li><strong>Skin type: </strong>Fur</li>
+						<li><strong>Location: </strong>Central-America</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Kit Fox</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Type: </strong>mammal</li>
+						<li><strong>Lifespan: </strong>seven years in the wild. 12 years in captivity</li>
+						<li><strong>Weight: </strong>4.5 to five pounds</li>
+						<li><strong>Length: </strong>20 inches (body), 12 inches (tail)</li>
+						<li><strong>Skin type: </strong>Fur</li>
+						<li><strong>Location: </strong>Central-America</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Marble Fox</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Type: </strong>Mammal</li>
+						<li><strong>Lifespan: </strong>Up to 15 years</li>
+						<li><strong>Weight: </strong>1-10kg (3-21lbs)</li>
+						<li><strong>Length: </strong>Up to 63cm (25in) in body length, not including the tail</li>
+						<li><strong>Skin type: </strong>Fur</li>
+						<li><strong>Location: </strong>North-America</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Red Fox</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Lifespan: </strong>2-4 years in the wild, 10-12 in captivity</li>
+						<li><strong>Weight: </strong>6.5-24 lbs</li>
+						<li><strong>Length: </strong>36-42 inches</li>
+						<li><strong>Skin type: </strong>Hair</li>
+						<li><strong>Location: </strong>Africa</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Smooth Fox Terrier</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Lifespan: </strong>12 – 15 years</li>
+						<li><strong>Skin type: </strong>Hair</li>
+						<li><strong>Location: </strong>Europe</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Tibetan Fox</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Carnivore</li>
+						<li><strong>Type: </strong>Mammal</li>
+						<li><strong>Lifespan: </strong>8-10 years</li>
+						<li><strong>Weight: </strong>8-12 lbs (4-5 kg)</li>
+						<li><strong>Length: </strong>24-28 in (60-70 cm)</li>
+						<li><strong>Skin type: </strong>Fur</li>
+						<li><strong>Location: </strong>Asia</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Toy Fox Terrier</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Lifespan: </strong>11-14 years</li>
+						<li><strong>Weight: </strong>13 pounds</li>
+						<li><strong>Skin type: </strong>Hair</li>
+						<li><strong>Location: </strong>North-America</li>
+					</ul>
+				</div>
+			</li>
+			<li class="cards__item">
+				<div class="card__title">Name: Wire Fox Terrier</div>
+				<div class="card__text">
+					<ul>
+						<li><strong>Diet: </strong>Omnivore</li>
+						<li><strong>Lifespan: </strong>13 – 14 years</li>
+						<li><strong>Weight: </strong>19 lbs</li>
+						<li><strong>Skin type: </strong>Hair</li>
+						<li><strong>Location: </strong>Europe</li>
+					</ul>
+				</div>
+			</li>
+
+        </ul>
+    </body>
+</html>
