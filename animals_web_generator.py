@@ -20,33 +20,14 @@ Goal:
 - Avoid KeyError and IndexError by checking keys and list length before access.
 """
 
-from dotenv import load_dotenv
-load_dotenv()
+import data_fetcher
 import json
-
-import os
-import requests
 
 BASE = "\t\t\t"
 I0 = BASE + "\t"
 I1 = BASE + "\t\t"
 I2 = BASE + "\t\t\t"
 I3 = BASE + "\t\t\t\t"
-
-api_key = os.getenv("API_KEY")
-
-URL_GET = 'https://api.api-ninjas.com/v1/animals'
-
-
-def fetch_animals_from_api(name: str):
-    params = {"name": name}
-    headers = {"X-Api-Key": api_key}
-
-    res = requests.get(URL_GET, params=params, headers=headers)
-    print("Status:", res.status_code)
-    res.raise_for_status()
-
-    return res.json()
 
 
 def load_data(file_path):
@@ -239,7 +220,7 @@ def main():
 
     animal_name = input('Enter a name of an animal: ').strip()
 
-    result_animals_data = fetch_animals_from_api(animal_name)
+    result_animals_data = data_fetcher.fetch_data(animal_name)
 
     if not result_animals_data:
         error_html = f'<h2>The animal "{animal_name}" doesn\'t exist.</h2>'
