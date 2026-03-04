@@ -237,7 +237,9 @@ def main():
         None
     """
 
-    result_animals_data = fetch_animals_from_api('Fox')
+    animal_name = input('Enter a name of an animal: ').strip()
+
+    result_animals_data = fetch_animals_from_api(animal_name)
     skins = get_all_skin_of_animal(result_animals_data)
     allowed_skins = {s.lower() for s in skins}
 
@@ -259,6 +261,7 @@ def main():
                 "animals.html",
                 "__REPLACE_ANIMALS_INFO__",
                 summary)
+            print("Website was successfully generated to the file animals.html.")
             break
         if user_input not in allowed_skins:
             print("Please choose one of the available skins")
@@ -272,6 +275,7 @@ def main():
         "animals.html",
         "__REPLACE_ANIMALS_INFO__",
             summary)
+        print("Website was successfully generated to the file animals.html.")
         break
 
 
